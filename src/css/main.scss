@@ -59,3 +59,7 @@
 	* @import "utilities/background-patterns";
 	* @import "utilities/skew-transforms";
 	*/
+
+.error {
+  background: config("colors.blue-darker");
+}
