@@ -1,8 +1,9 @@
-'use strict'
+"use strict";
 
-const utils = require('./utils')
-const config = require('../config')
-const isProduction = process.env.NODE_ENV === 'production'
+const utils = require("./utils");
+const config = require("../config");
+const isProduction = process.env.NODE_ENV === "production";
+const tailwindcss = require("tailwindcss");
 
 module.exports = {
   loaders: utils.cssLoaders({
@@ -12,9 +13,10 @@ module.exports = {
     extract: isProduction
   }),
   transformToRequire: {
-    video: 'src',
-    source: 'src',
-    img: 'src',
-    image: 'xlink:href'
-  }
-}
+    video: "src",
+    source: "src",
+    img: "src",
+    image: "xlink:href"
+  },
+  postcss: [tailwindcss("./tailwind-config.js"), require("autoprefixer")]
+};
