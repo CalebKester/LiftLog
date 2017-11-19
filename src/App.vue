@@ -1,6 +1,6 @@
 <template>
   <div id="app" class="bg-indigo-darkest h-screen font-sans text-white">
-    <header class="pt-8 text-5xl text-center">
+    <header :class="$style.logo" class="pt-8 text-center tracking-tight">
       LiftLog
     </header>
     <main>
@@ -17,4 +17,10 @@ export default {
 
 <style lang="scss">
 @import "./css/main.scss";
+</style>
+
+<style module>
+.logo {
+  font-size: 16vw;
+}
 </style>

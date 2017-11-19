@@ -60,6 +60,10 @@
 	* @import "utilities/skew-transforms";
 	*/
 
+.min-h-half {
+  min-width: 50%;
+}
+
 .error {
   background: config("colors.blue-darker");
 }

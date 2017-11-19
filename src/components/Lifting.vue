@@ -1,9 +1,26 @@
 <template>
+  <!-- <div class="absolute pin-b pin-x"> -->
   <div class="absolute pin-b pin-x">
-    <div class="p-4 bg-indigo-darker">
-      <h1 class="text-center mt-2">{{result}} lb</h1>
+    <div class="p-4 mb-8">
+      <div :class="$style.text" class="flex mr-auto ml-auto">
+        <button
+          @click="handleAdjustWeight(-5)"
+          class="w-auto text-white ml-auto text-indigo-light"
+          type="button"
+        >&minus;</button>
+        <div
+          class="w-1/2 text-center text-indigo-lightest"
+        >{{ weight }}</div>
+        <button
+          @click="handleAdjustWeight(5)"
+          class="w-auto text-white mr-auto text-indigo-light"
+          type="button"
+        >+</button>
+      </div>
+      <div :class="$style['text-small']" class="text-center mt-2">MAX</div>
     </div>
-    <div class="py-4 px-8 bg-indigo">
+
+    <div class="py-8 px-8 bg-indigo-darker">
       <input
         type="range"
         class="w-full"
@@ -11,25 +28,15 @@
         max="100"
         v-model="percent"
       />
-      <h5 class="text-center mt-2">{{percent}}%</h5>
+      <div :class="$style['text-small']"  class="text-center mt-2">{{percent}}%</div>
     </div>
-    <div class="p-4 bg-indigo-light">
-      <h1 class="flex w-48 mr-auto ml-auto">
-        <button
-          @click="handleAdjustWeight(-5)"
-          class="w-1/3 text-white"
-          type="button"
-        >&minus;</button>
-        <div
-          class="w-1/3"
-        >{{ weight }}</div>
-        <button
-          @click="handleAdjustWeight(5)"
-          class="w-1/3 text-white"
-          type="button"
-        >+</button>
-      </h1>
-      <h5 class="text-center mt-2">MAX</h5>
+
+    <div class="p-4 bg-indigo-dark">
+      <div
+        :class="$style.text"
+        class="text-center text-indigo-lightest"
+      >{{ result }}</div>
+      <div :class="$style['text-small']" class="text-center mt-2">POUNDS</div>
     </div>
   </div>
 </template>
@@ -55,3 +62,12 @@ export default {
   }
 };
 </script>
+
+<style module>
+.text {
+  font-size: 20vw;
+}
+.text-small {
+  font-size: 5vw;
+}
+</style>
