@@ -12,5 +12,5 @@ script:
 deploy:
   provider: surge
   project: ./dist/
-  domain: liftlog.surg.sh
+  domain: liftlog.surge.sh
   skip_cleanup: true
