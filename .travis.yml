@@ -1,22 +1,13 @@
-{
-  "cache": {
-    "yarn": true,
-    "directories": [
-      "node_modules"
-    ]
-  }
-  "language": "node_js",
-  "install": [
-    "yarn",
-    "yarn add surge"
-  ],
-  "script": [
-    "yarn build"
-  ],
-  "after_success": [
-    "surge --project ./dist --domain liftlog.surg.sh"
-  ],
-  "group": "stable",
-  "dist": "trusty",
-  "os": "linux"
-}
+cache:
+  yarn: true
+  directories:
+    - node_modules
+language: node_js
+node_js:
+  - "node"
+install:
+  - "yarn"
+script:
+  - "yarn build"
+after_success:
+  - "surge --project ./dist --domain liftlog.surg.sh"
