@@ -29,7 +29,7 @@
           type="button"
         >+</button>
       </h1>
-      <h5 class="text-center mt-2">MAX WEIGHT</h5>
+      <h5 class="text-center mt-2">MAX</h5>
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
   name: "hello",
   data() {
     return {
-      weight: 145,
+      weight: 225,
       percent: 50
     };
   },
