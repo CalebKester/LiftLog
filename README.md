@@ -1,5 +1,7 @@
 # liftlog
 
+[![Build Status](https://travis-ci.org/CalebKester/LiftLog.svg?branch=master)](https://travis-ci.org/CalebKester/LiftLog)
+
 > Log your lift
 
 ## Build Setup
