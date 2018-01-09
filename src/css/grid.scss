@@ -9,7 +9,7 @@
 }
 
 .grid--lifts {
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
 }
 
 @media (min-width: 768px) {

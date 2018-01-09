@@ -6,19 +6,19 @@ Vue.use(Vuex);
 const state = {
   lifts: [
     {
-      id: "pressFloor",
       name: "Floor Press",
-      weight: 150
+      weight: 150,
+      theme: "bg-teal"
     },
     {
-      id: "deadLift",
       name: "Dead Lift",
-      weight: 150
+      weight: 150,
+      theme: "bg-red"
     },
     {
-      id: "squatBack",
       name: "Squat",
-      weight: 150
+      weight: 150,
+      theme: "bg-blue"
     }
   ]
 };
