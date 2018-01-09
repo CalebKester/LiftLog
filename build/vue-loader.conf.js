@@ -18,5 +18,5 @@ module.exports = {
     img: "src",
     image: "xlink:href"
   },
-  postcss: [tailwindcss("./tailwind-config.js"), require("autoprefixer")]
+  postcss: [tailwindcss("./tailwind.js"), require("autoprefixer")]
 };

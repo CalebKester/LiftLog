@@ -1,7 +1,9 @@
 import Vue from "vue";
 import App from "./App";
 import router from "./router";
+import Vuex from "./store";
 
+Vue.use(Vuex);
 Vue.config.productionTip = false;
 
 /* eslint-disable no-new */

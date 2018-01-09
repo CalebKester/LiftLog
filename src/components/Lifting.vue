@@ -43,7 +43,6 @@
 
 <script>
 export default {
-  name: "hello",
   data() {
     return {
       weight: 225,

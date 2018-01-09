@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "app"
+  name: "Lift Log"
 };
 </script>
 

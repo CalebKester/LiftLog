@@ -5,6 +5,7 @@ import Lifting from "@/components/Lifting";
 Vue.use(Router);
 
 export default new Router({
+  mode: "history",
   routes: [
     {
       path: "/",
