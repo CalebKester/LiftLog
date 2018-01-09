@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: "Lift Log"
+  name: "LiftLog"
 };
 </script>
 
@@ -21,6 +21,18 @@ export default {
 
 <style module>
 .logo {
-  font-size: 16vw;
+  font-size: 6rem;
+}
+
+@media (orientation: portrait) {
+  .logo {
+    font-size: 16vw;
+  }
+}
+
+@media (orientation: landscape) {
+  .logo {
+    font-size: 16vh;
+  }
 }
 </style>
