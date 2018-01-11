@@ -1,6 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Lifting from "@/components/Lifting";
+import WeightCalc from "@/components/WeightCalc";
 import SelectLift from "@/components/SelectLift";
 
 Vue.use(Router);
@@ -10,13 +10,14 @@ export default new Router({
   routes: [
     {
       path: "/",
-      name: "Lifting",
-      component: Lifting
-    },
-    {
-      path: "/lift",
       name: "SelectLift",
       component: SelectLift
+    },
+    {
+      path: "/:lift",
+      name: "WeightCalc",
+      component: WeightCalc,
+      props: true
     }
   ]
 });

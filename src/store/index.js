@@ -1,39 +1,55 @@
 import Vue from "vue";
 import Vuex from "vuex";
+import createPersistedState from "vuex-persistedstate";
+
+/* eslint-disable no-shadow */
 
 Vue.use(Vuex);
 
 const state = {
-  lifts: [
-    {
+  lifts: {
+    "floor-press": {
       name: "Floor Press",
       weight: 150,
-      theme: "bg-teal"
+      percent: 50,
+      theme: "teal"
     },
-    {
+    "dead-lift": {
       name: "Dead Lift",
       weight: 150,
-      theme: "bg-red"
+      percent: 50,
+      theme: "red"
     },
-    {
+    squat: {
       name: "Squat",
       weight: 150,
-      theme: "bg-blue"
+      percent: 50,
+      theme: "blue"
     }
-  ]
+  }
 };
-
-const mutations = {};
+/* eslint-disable no-param-reassign */
+const mutations = {
+  updateWeight(state, lift) {
+    state.lifts[lift.name].weight = lift.weight;
+  }
+};
+/* eslint-enable no-param-reassign */
 
 const actions = {};
 
-const getters = {};
+const getters = {
+  liftName: state => lift => state.lifts[lift].name,
+  liftWeight: state => lift => state.lifts[lift].weight,
+  liftTheme: state => lift => state.lifts[lift].theme
+};
 
 const store = new Vuex.Store({
   state,
   mutations,
   actions,
-  getters
+  getters,
+  plugins: [createPersistedState()]
 });
 
 export default store;
