@@ -60,12 +60,42 @@
 	* @import "utilities/skew-transforms";
 	*/
 
-.min-h-half {
-  min-width: 50%;
+// .theme-red {
+//   --theme: config("colors.blue-darker");
+// }
+
+// .min-h-half {
+//   min-width: 50%;
+// }
+
+// .error {
+//   background: config("colors.blue-darker");
+// }
+
+.header {
+  @apply .relative .flex .items-center;
+
+  @media (orientation: portrait) {
+    @apply .justify-between;
+  }
+  @media (orientation: landscape) {
+    @apply .flex-col;
+  }
 }
 
-.error {
-  background: config("colors.blue-darker");
+.title {
+  @apply .text-center .text-2xl .py-2;
+
+  @media (orientation: landscape) {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    @apply .whitespace-no-wrap;
+  }
+}
+
+.back {
+  @apply .text-white .p-2;
 }
 
 @import "./input-range";

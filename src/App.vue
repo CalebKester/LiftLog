@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="bg-indigo-darkest h-screen font-sans text-white">
+  <div id="app" class="bg-indigo-darkest h-full font-sans text-white">
     <router-view></router-view>
   </div>
 </template>

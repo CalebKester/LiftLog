@@ -44,6 +44,7 @@ let defaultConfig = require("tailwindcss/defaultConfig")();
 
 let colors = {
   transparent: "transparent",
+  theme: "var(--theme)",
 
   black: "#22292f",
   "grey-darkest": "#3d4852",
@@ -164,10 +165,12 @@ module.exports = {
   */
 
   screens: {
-    sm: "576px",
-    md: "768px",
-    lg: "992px",
-    xl: "1200px"
+    // sm: "576px",
+    // md: "768px",
+    // lg: "992px",
+    // xl: "1200px",
+    landscape: { raw: "(orientation: landscape)" },
+    portrait: { raw: "(orientation: portrait)" }
   },
 
   /*
